@@ -24,10 +24,15 @@ st.sidebar.title("🍔 導覽列")
 page = st.sidebar.radio("請選擇頁面：", ["🎲 抽籤決定", "⚙️ 管理清單"])
 
 # ==============================
-# 頁面 1：抽籤決定
+# 頁面 1：抽籤決定（主頁面）
 # ==============================
 if page == "🎲 抽籤決定":
     st.title("🍔 今天吃什麼？ 🍜")
+    
+    # 這裡新增了姓名與學號資訊
+    st.markdown("#### 👤 開發者：楊哲綸 ｜ 🆔 學號：B3232064")
+    st.divider()  # 加一條分隔線讓視覺更乾淨
+
     st.header("🍕 幫我決定")
 
     options = ["全部隨機"] + list(st.session_state.food_categories.keys())
